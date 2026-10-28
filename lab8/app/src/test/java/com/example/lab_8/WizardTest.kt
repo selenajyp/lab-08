@@ -46,4 +46,22 @@ class WizardTest {
 
         assertEquals(70, evilWizard.mana)
     }
+    //One test should test if we have enough mana
+    @Test
+    fun train_enoughMana(){
+        evilWizard.mana=10
+        evilWizard.train()
+
+        assertEquals(15,evilWizard.mana)
+
+    }
+
+    //The other test should test if we don't have enough mana
+    @Test
+    fun train_notEnoughMana(){
+        evilWizard.mana=4
+        evilWizard.train()
+
+        assertEquals(4, evilWizard.mana)
+    }
 }
